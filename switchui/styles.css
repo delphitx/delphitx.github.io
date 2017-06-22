@@ -1,0 +1,127 @@
+*:not(head) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: sans-serif;
+  background: #777;
+}
+
+.wrapper {
+  width: 1280px;
+  height: 720px;
+  flex-direction: column;
+  background-color: #ebebeb;
+  color:  #282828;
+}
+
+header {
+  padding: 2em 1.5em;
+  justify-content: space-between;
+}
+
+.user {
+  padding: 0 2em;
+}
+
+.user {
+  list-style: none;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+.user img {
+  display: block;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  padding: 0.5em 1em;
+  color: #2a2a2a;
+  font-weight: 700;
+}
+
+main {
+  padding-bottom: 2em;
+}
+
+main nav {
+  overflow-x: scroll;
+}
+
+.boxes {
+  padding: 1em 6em 2em;
+}
+
+.box {
+  padding-left: 13px;
+  padding-top: 3em;
+  position: relative;
+  flex-direction: column;
+}
+
+.box .image {
+  width: 257px;
+  height: 257px;
+  border: 3px solid #f4f4f4;
+  background-color: #eeeeee;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+  color: transparent;
+}
+
+.box:hover .image,
+.box:focus .image {
+  border-color: #f5f4f5;
+  background-color: #eeeeee;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 8px #46e7d3, 0 8px 3px 3px rgba(0,0,0,0.05);
+  animation: pulseBorder 0.475s ease-in-out infinite alternate;
+}
+
+@keyframes pulseBorder {
+  to {
+    box-shadow: 0 0 0 3px #fff, 0 0 0 8px #0abcc1, 0 8px 3px 3px rgba(0,0,0,0.05);
+  }
+}
+
+.box .title {
+  position: absolute;
+  display: block;
+
+  color: #10bccf;
+  font-size: 1.95em;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  opacity: 0;
+
+  width: 125%;
+  transform: translate(-10%, -50px);
+}
+
+.box:hover .title,
+.box:focus .title {
+  opacity: 1;
+}
