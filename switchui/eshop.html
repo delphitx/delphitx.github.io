@@ -18,11 +18,14 @@
   </style>
   <script>
     resizeTo(480,270);
+    setTimeout(() => {
+      document.getElementById("e").innerHTML = "<pre>Error: Socket closed with status 403 Access Denied</pre>";
+    }, 5000);
   </script>
 </head>
 </head>
 <body>
 <!--<img style="width:100%;height:100%;" src="icons/eshop_load.gif"></img>-->
-<h1 style="margin:auto;"><pre>Contacting Nintendo eShop...</pre></h1>
+<h1 style="margin:auto;"><pre id="e">Contacting Nintendo eShop...</pre></h1>
 </body>
 </html>
